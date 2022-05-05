@@ -17,3 +17,15 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBeDefined();
     expect(stack.peek()).toBe(42);
 });
+
+test('peek on stack with one element returns that element', () => {
+    // while loopen kontrollerar så att listan är tom, är den inte det, tömmer den listan
+    while (stack.peek() != undefined) {
+        stack.pop();
+    }
+    stack.push("hej");
+    stack.push("hoj");
+    expect(stack.pull()).toBeDefined();
+    expect(stack.pull()).toBe("hej");
+});
+
